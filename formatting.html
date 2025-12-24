@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop: HTML Formatting Element</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #eaeaf0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .container>h1 {
+            text-align: center;
+            color: #7dd3fc;
+            margin-bottom: 5px;
+        }
+
+        .container>p {
+            text-align: center;
+            color: #c7d2fe;
+            margin-bottom: 35px;
+        }
+
+        .card {
+            background-color: #1e1e2f;
+            padding: 22px 26px;
+            margin-bottom: 25px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            border-left: 6px solid #38bdf8;
+        }
+
+        .card h2 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .card p,
+        .card ul {
+            line-height: 1.8;
+            color: #e5e7eb;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .highlight {
+            color: #f472b6;
+            font-weight: bold;
+        }
+
+        code.highlight {
+            background-color: #111827;
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-family: Consolas, monospace;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #7dd3fc;
+        }
+
+        a:hover {
+            color: #f472b6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Workshop: HTML Formatting Element</h1>
+        <p>ฝึกใช้แท็กรูปแบบข้อความ (Formatting Tags) เพื่อสร้างเนื้อหาที่อ่านง่ายและเป็นระเบียบ</p>
+
+        <div class="card">
+            <h2>1. สิ่งที่ต้องรู้ก่อนเริ่มทำ Workshop</h2>
+            <p>
+                HTML มีแท็กสำหรับจัดรูปแบบข้อความ ทำให้เนื้อหาดูเด่น อ่านง่าย
+                และสื่อความหมายได้ดีขึ้น
+            </p>
+
+            <ul>
+                <li>&lt;b&gt; <b class="highlight">ตัวหนา</b></li>
+                <li>&lt;strong&gt; <strong class="highlight">ตัวหนาเชิงความหมาย</strong></li>
+                <li>&lt;i&gt; <i class="highlight">ตัวเอียง</i></li>
+                <li>&lt;em&gt; <em class="highlight">เน้นน้ำเสียง</em></li>
+                <li>&lt;mark&gt; <mark class="highlight">ไฮไลต์ข้อความ</mark></li>
+            </ul>
+
+            <p>
+                นักศึกษาต้องใช้แท็ก formatting อย่างน้อย
+                <strong class="highlight">5 ชนิด</strong>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. ภารกิจสำหรับนักศึกษาต้องทำ</h2>
+            <p>ค้นหาเนื้อหาเกี่ยวกับ “เทคโนโลยีคอมพิวเตอร์สมัยใหม่” โดยต้องมี:</p>
+            <ul>
+                <li>หัวข้อ &lt;h1&gt; จำนวน 1 อัน</li>
+                <li>ย่อหน้า &lt;p&gt; อย่างน้อย 3 ย่อหน้า</li>
+                <li>ใช้แท็ก formatting อย่างน้อย 5 ประเภท</li>
+                <li>ข้อความที่จัด formatting ต้องเป็นสีแดงชมพู</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>เทคโนโลยีคอมพิวเตอร์สมัยใหม่</h2>
+
+            <p>
+                <strong class="highlight">เทคโนโลยีคอมพิวเตอร์</strong>
+                มีบทบาทสำคัญในชีวิตประจำวัน
+                โดยช่วยเพิ่มประสิทธิภาพในการทำงานและการสื่อสาร
+            </p>
+
+            <p>
+                ปัจจุบันมีการใช้
+                <em class="highlight">ปัญญาประดิษฐ์ (AI)</em>
+                และ
+                <b class="highlight">คลาวด์คอมพิวติ้ง</b>
+                อย่างแพร่หลาย
+            </p>
+
+            <p>
+                ตัวอย่างเทคโนโลยีที่น่าสนใจ ได้แก่
+                <mark class="highlight">Internet of Things (IoT)</mark>,
+                <code class="highlight">Machine Learning</code>
+                และระบบอัตโนมัติอัจฉริยะ
+            </p>
+        </div>
+
+        <a href="#">&larr; Back to HTML Tutorial</a>
+    </div>
+</body>
+
+</html>
