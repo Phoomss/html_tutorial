@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop: HTML Headings</title>
+</head>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eef3fb; /* ฟ้าอ่อน */
+}
+
+/* container */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* หัวข้อหลัก */
+.container > h1 {
+    text-align: center;
+    color: #0a3d91; /* น้ำเงินเข้ม */
+    margin-bottom: 10px;
+}
+
+.container > p {
+    text-align: center;
+    color: #4a6fa5;
+    margin-bottom: 30px;
+}
+
+/* card */
+.card {
+    background-color: #ffffff;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(10, 61, 145, 0.12);
+    border-left: 6px solid #1e5eff; /* เส้นน้ำเงินด้านซ้าย */
+}
+
+/* หัวข้อในการ์ด */
+.card h2 {
+    color: #1e5eff;
+    margin-bottom: 10px;
+}
+
+/* ข้อความ */
+.card p {
+    color: #333;
+    line-height: 1.7;
+}
+
+/* list */
+.card ul {
+    margin-left: 20px;
+    line-height: 1.7;
+}
+
+/* code block */
+pre {
+    background-color: #f1f5ff;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 14px;
+    border: 1px solid #d6e0ff;
+}
+
+/* heading examples */
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card h6 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* link */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #1e5eff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <h1>Workshop: HTML Headings</h1>
+        <p>ฝึกใช้แท็ก &lt;h1&gt; - &lt;h6&gt; และการปรับขนาดหัวข้อด้วย CSS</p>
+
+        <div class="card">
+            <h2>1. ความหมายของ Headings (H1–H6)</h2>
+            <p>HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
+            <ul>
+                <li>H1 – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
+                <li>H2 – หัวข้อรอง ใช้แบ่ง Section ของเนื้อหา</li>
+                <li>H3 – หัวข้อย่อยภายใน H2</li>
+                <li>H4 – หัวข้อย่อยลงไปอีกระดับ</li>
+                <li>H5 – ใช้น้อย แต่ใช้เน้นลำดับข้อมูล</li>
+                <li>H6 – หัวข้อขนาดเล็กที่สุด ใช้กับหัวข้อระดับลึก</li>
+            </ul>
+            <p>
+                เช่น H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วยเรื่อง SEO และโครงสร้างของเอกสาร
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. ตัวอย่างการใช้ H1–H6</h2>
+            <pre>
+&lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+&lt;h2&gt;HTML Basics&lt;/h2&gt;
+&lt;h3&gt;What is HTML?&lt;/h3&gt;
+&lt;h4&gt;HTML Syntax&lt;/h4&gt;
+&lt;h5&gt;Example Code&lt;/h5&gt;
+&lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;
+            </pre>
+
+            <p>เมื่อแสดงผลจะได้ขนาดประมาณนี้:</p>
+
+            <h1>H1: Welcome to My Website</h1>
+            <h2>H2: HTML Basics</h2>
+            <h3>H3: What is HTML?</h3>
+            <h4>H4: HTML Syntax</h4>
+            <h5>H5: Example Code</h5>
+            <h6>H6: Note about heading size</h6>
+        </div>
+
+        <div class="card">
+            <h2>3. ถ้าอยากให้หัวข้อ “ใหญ่กว่า” หรือ “เล็กกว่า” ขนาดเดิม?</h2>
+            <p>ให้ใช้ CSS แทนการเลือก h1–h6 ผิดลำดับ เช่น:</p>
+
+            <pre>
+h3 {
+    font-size: 40px; /* ทำให้ H3 ใหญ่เท่า H1 ได้ */
+    color: #c4005a;
+}
+
+h5 {
+    font-size: 12px; /* ทำให้ H5 เล็กลง */
+}
+            </pre>
+
+            <p>หรือสามารถกำหนดเฉพาะบางหัวข้อได้:</p>
+
+            <pre>
+&lt;h3 style="font-size: 50px; color: blue;"&gt;
+    Big Custom Heading
+&lt;/h3&gt;
+            </pre>
+
+            <p>
+                จำไว้ว่า ลำดับหัวข้อควรเป็น H1 → H2 → H3 ตามโครงสร้างเนื้อหา  
+                ไม่ควรใช้ H5 เพียงเพื่อให้ตัวอักษรเล็กลง  
+                หรือใช้ H1 เพียงเพื่อให้ตัวอักษรใหญ่ขึ้น  
+                → ต้องแก้ไขด้วย CSS เท่านั้น
+            </p>
+        </div>
+
+        <a href="#">&larr; Back to HTML Tutorial</a>
+    </div>
+</body>
+</html>
