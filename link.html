@@ -1,193 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Various Links Workshop</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+      * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #eef3fb;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #eef3fb;
+      }
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+      }
 
-        .header {
-            text-align: center;
-            color: rgb(227, 5, 157);
-            margin-bottom: 10px;
-        }
+      .header {
+        text-align: center;
+        color: rgb(227, 5, 157);
+        margin-bottom: 10px;
+      }
 
-        .sub-header {
-            text-align: center;
-            color: gray;
-            margin-bottom: 20px;
-        }
+      .sub-header {
+        text-align: center;
+        color: gray;
+        margin-bottom: 20px;
+      }
 
-        .external-link,
-        .internal-link,
-        .email-link,
-        .download-link,
-        .button-link,
-        .image-image {
-            background-color: #ffffff;
-            padding: 20px 25px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            box-shadow: 0 6px 15px rgba(10, 61, 145, 0.12);
-            border-top: 6px solid #f30303;
-        }
+      .external-link,
+      .internal-link,
+      .email-link,
+      .download-link,
+      .button-link,
+      .image-image {
+        background-color: #ffffff;
+        padding: 20px 25px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 6px 15px rgba(10, 61, 145, 0.12);
+        border-top: 6px solid #f30303;
+      }
 
-        .internal-link {
-            border-top: 6px solid #2b03f3;
-        }
+      .internal-link {
+        border-top: 6px solid #2b03f3;
+      }
 
-        .email-link {
-            border-top: 6px solid #03f35f;
-        }
+      .email-link {
+        border-top: 6px solid #03f35f;
+      }
 
-        .card {
-            background: #f8f9ff;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
+      .card {
+        background: #f8f9ff;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
 
-        pre {
-            background: #f1f1f1;
-            padding: 10px;
-            overflow-x: auto;
-        }
+      pre {
+        background: #f1f1f1;
+        padding: 10px;
+        overflow-x: auto;
+      }
 
-        .btn-link {
-            display: inline-block;
-            background-color: #0066ff;
-            color: #fff;
-            padding: 10px 18px;
-            border-radius: 6px;
-            text-decoration: none;
-        }
+      .btn-link {
+        display: inline-block;
+        background-color: #0066ff;
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 6px;
+        text-decoration: none;
+      }
 
-        .group-btn button {
-            padding: 10px 18px;
-            margin-right: 10px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            background-color: #ff4081;
-            color: white;
-        }
+      .group-btn {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        max-width: 600px;
+        margin: 40px auto;
+      }
 
-        .card-1,
-        .card-2 {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 25px;
-        }
+      .group-btn button,
+      .group-btn a {
+        padding: 12px 18px;
+        min-height: 48px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        background: palevioletred;
+      }
 
-        .external-link,
-        .internal-link,
-        .email-link,
-        .download-link {
-            flex: 1 1 48%;
-            min-width: 280px;
-        }
+      .group-btn button:hover,
+      .group-btn a:hover {
+        opacity: 0.9;
+      }
 
-        .button-link,
-        .image-image {
-            max-width: 100%;
-        }
-        code {
-            background: rgb(173, 172, 172);
-            padding: 5px;
-            margin: 5px;
-            border-radius: 10px;
-        }
+      .color-gold:hover {
+        background: transparent;
+        color: gold;
+        border: 2px solid gold;
+      }
+
+      .animation {
+        background: #4caf50;
+      }
+
+      .animation:hover {
+        transform: scale(1.05);
+      }
+
+      .rgb {
+        position: relative;
+        background: black;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        overflow: hidden;
+        z-index: 0;
+        border: none;
+      }
+
+      .rgb::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        background: linear-gradient(
+          90deg,
+          gold,
+          red,
+          orange,
+          yellow,
+          lime,
+          cyan,
+          blue,
+          violet,
+          gold
+        );
+        background-size: 300%;
+        animation: light-run 3s linear infinite;
+        z-index: -1;
+        border-radius: 10px;
+      }
+
+      .rgb::after {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        background: black;
+        border-radius: 6px;
+        z-index: -1;
+      }
+
+      .rgb:hover {
+        box-shadow: 0 0 15px gold;
+      }
+
+      .card-1,
+      .card-2 {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+      }
+
+      .external-link,
+      .internal-link,
+      .email-link,
+      .download-link {
+        flex: 1 1 48%;
+        min-width: 280px;
+      }
+
+      .button-link,
+      .image-image {
+        max-width: 100%;
+      }
+      code {
+        background: rgb(173, 172, 172);
+        padding: 5px;
+        margin: 5px;
+        border-radius: 10px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1 class="header">Workshop: Various Links</h1>
-        <p class="sub-header">Learn about various types of links with examples and practice</p>
+      <h1 class="header">Workshop: Various Links</h1>
+      <p class="sub-header">
+        Learn about various types of links with examples and practice
+      </p>
 
-        <div class="card-1">
-            <div class="external-link">
-                <h2>1. External Links</h2>
-                <div class="card">
-                    <p>Visit Wikipedia</p>
-                    <p><code>target="_blank"</code><span>open new link</span></p>
-                </div>
-                <div class="card">
-                    <p>Visit Google</p>
-                    <p><code>target="_self"</code><span>open new only page</span></p>
-                </div>
-            </div>
+      <div class="card-1">
+        <div class="external-link">
+          <h2>1. External Links</h2>
+          <div class="card">
+            <p>Visit Wikipedia</p>
+            <p><code>target="_blank"</code><span>open new link</span></p>
+          </div>
+          <div class="card">
+            <p>Visit Google</p>
+            <p><code>target="_self"</code><span>open new only page</span></p>
+          </div>
+        </div>
 
-            <div class="internal-link">
-                <h2>2. Internal Links & Anchor Links</h2>
-                <div class="card">
-                    <pre>
+        <div class="internal-link">
+          <h2>2. Internal Links & Anchor Links</h2>
+          <div class="card">
+            <pre>
 &lt;a href="about.html"&gt;about as&lt;/a&gt;
 &lt;a href="#jump"&gt;jump to section&lt;/a&gt;
 &lt;a href="#jump"&gt;jump to target&lt;/a&gt;
-                </pre>
-                </div>
-                <a href="#jump">Click to Jump</a>
-                <h3 id="jump">This is jump target.</h3>
-            </div>
+                </pre
+            >
+          </div>
+          <a href="#jump">Click to Jump</a>
+          <h3 id="jump">This is jump target.</h3>
         </div>
+      </div>
 
-        <div class="card-2">
-            <div class="email-link">
-                <h2>3. Email Links</h2>
-                <div class="card">
-                    <pre>
+      <div class="card-2">
+        <div class="email-link">
+          <h2>3. Email Links</h2>
+          <div class="card">
+            <pre>
 &lt;a href="mailto:674259009@webmail.npru.ac.th?subject=Hello"&gt;send an email&lt;/a&gt;
-                </pre>
-                </div>
-                <a href="mailto:674259009@webmail.npru.ac.th?subject=Hello">send an email</a>
-            </div>
-
-            <div class="download-link">
-                <h2>4. Download Links</h2>
-                <div class="card">
-                    <pre>
-&lt;a href="files/sample.text" download&gt;Download File&lt;/a&gt;
-                </pre>
-                </div>
-                <button>Download TextFile</button>
-                <h3>should have file on folder will can download </h3>
-            </div>
+                </pre
+            >
+          </div>
+          <a href="mailto:674259009@webmail.npru.ac.th?subject=Hello"
+            >send an email</a
+          >
         </div>
 
-        <div class="button-link">
-            <h2>Button Link</h2>
-            <p>Links designed to look like buttons, suitable for sign-up buttons, read more buttons, or navigation
-                buttons</p>
-
+        <div class="download-link">
+          <h2>4. Download Links</h2>
+          <div class="card">
             <pre>
+&lt;a href="files/sample.text" download&gt;Download File&lt;/a&gt;
+                </pre
+            >
+          </div>
+          <button>Download TextFile</button>
+          <h3>should have file on folder will can download</h3>
+        </div>
+      </div>
+
+      <div class="button-link">
+        <h2>Button Link</h2>
+        <p>
+          Links designed to look like buttons, suitable for sign-up buttons,
+          read more buttons, or navigation buttons
+        </p>
+
+        <pre>
 &lt;a href="https://www.google.com" class="btn-link"&gt;Visit Website&lt;/a&gt;
-            </pre>
+            </pre
+        >
 
-            <a href="https://www.google.com" class="btn-link">Visit Website</a>
+        <a href="https://www.google.com" class="btn-link">Visit Website</a>
 
-            <p>make button by tag button</p>
+        <p>make button by tag button</p>
 
-            <pre>
+        <pre>
 &lt;button onclick="document.location='index.html'"&gt;HTML Tutorial&lt;/button&gt;
 - Usually links to the same page
 - merge DOM(document) Directly
@@ -196,30 +283,43 @@
 - popular use more
 - Suitable for internal and external links
 - tied to window Directly
-            </pre>
+        </pre>
 
-            <div class="group-btn">
-                <button>HTML Tutorial</button>
-                <button>Visit Website</button>
-            </div>
+        <div class="group-btn">
+          <button onclick="location.href='https://www.w3schools.com/html/'">
+            HTML Tutorial
+          </button>
+
+          <button onclick="location.href='https://example.com'">
+            Visit Website
+          </button>
+
+          <a href="https://cssnippets.shefali.dev" target="_blank">
+            SUBSCRIBE
+          </a>
+
+          <button class="color-gold">SUBSCRIBE</button>
+          <button class="animation">SUBSCRIBE</button>
+          <button class="rgb">SUBSCRIBE</button>
         </div>
+      </div>
 
-        <div class="image-image">
-            <h2>6. Image Link</h2>
-            <p>click to image for open link </p>
-            <pre>
+      <div class="image-image">
+        <h2>6. Image Link</h2>
+        <p>click to image for open link</p>
+        <pre>
 &lt;a href="https://www.youtube.com/"&gt;
 &lt;img src="images/sample.jpg" width="250"&gt;
 &lt;/a&gt;
-            </pre>
+            </pre
+        >
 
-            <a href="https://www.youtube.com/">
-                <img src="images/sample.jpg" width="250">
-            </a>
-        </div>
+        <a href="https://www.youtube.com/">
+          <img src="images/sample.jpg" width="250" />
+        </a>
+      </div>
 
-        <a href="index.html">&larr; Back to HTML Tutorial</a>
+      <a href="index.html">&larr; Back to HTML Tutorial</a>
     </div>
-</body>
-
+  </body>
 </html>
