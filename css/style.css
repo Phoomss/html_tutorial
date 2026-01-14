@@ -118,18 +118,21 @@ pre {
 /* =====================
    Image basic
 ===================== */
-.position1,
-.position2,
-.position3 {
-  display: inline-block;
-  margin: 8px;
+.position {
+ display: flex;
+ margin-top: 20px;
 }
 
-.position1 img,
-.position2 img,
-.position3 img {
-  width: 120px;
-  border: 1px solid #ccc;
+.position.left {
+  justify-content: flex-start;
+}
+
+.position.center {
+  justify-content: center;
+}
+
+.position.right {
+  justify-content: flex-end;
 }
 
 /* =====================
