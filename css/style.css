@@ -59,18 +59,21 @@ code {
 /* =====================
    Card / Container
 ===================== */
-.card,
-.card1,
 .container {
   max-width: 900px;
   margin: 20px auto;
   padding: 20px;
-  background: #f8f9ff;
+  background: #e5e2e2;
   border-radius: 8px;
 }
 
 .card {
   border-top: 6px solid #f30303;
+  background: #ffffff;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 /* =====================
@@ -140,9 +143,17 @@ pre {
   border: 1px solid #000;
 }
 
-.contain img { object-fit: contain; }
-.fill img { object-fit: fill; }
-.cover img { object-fit: cover; }
+.contain img {
+  object-fit: contain;
+}
+
+.fill img {
+  object-fit: fill;
+}
+
+.cover img {
+  object-fit: cover;
+}
 
 /* =====================
    Image link
