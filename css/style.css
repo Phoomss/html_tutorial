@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef3fb;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+code {
+  background: #e5e7eb;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+
+/* =====================
+   Header
+===================== */
+.header {
+  text-align: center;
+  padding: 20px;
+  color: rgb(227, 5, 157);
+}
+
+.sub-header {
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header li {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.btn-text-link a {
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: #333;
+}
+
+/* =====================
+   Card / Container
+===================== */
+.card,
+.card1,
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f9ff;
+  border-radius: 8px;
+}
+
+.card {
+  border-top: 6px solid #f30303;
+}
+
+/* =====================
+   Text helpers
+===================== */
+.badge {
+  font-size: 10px;
+  background: #5550ec41;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.note {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f1f1f1;
+  border-left: 6px solid #b2b2b2;
+  font-size: 14px;
+}
+
+/* =====================
+   Code block
+===================== */
+pre {
+  background: #d2d2d2;
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 6px solid #f30303;
+  overflow-x: auto;
+}
+
+/* =====================
+   Image basic
+===================== */
+.position1,
+.position2,
+.position3 {
+  display: inline-block;
+  margin: 8px;
+}
+
+.position1 img,
+.position2 img,
+.position3 img {
+  width: 120px;
+  border: 1px solid #ccc;
+}
+
+/* =====================
+   Resize & object-fit
+===================== */
+.img-fixed {
+  width: 260px;
+  height: 160px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+/* =====================
+   Object-fit demo
+===================== */
+.contain img,
+.fill img,
+.cover img {
+  width: 800px;
+  height: 200px;
+  border: 1px solid #000;
+}
+
+.contain img { object-fit: contain; }
+.fill img { object-fit: fill; }
+.cover img { object-fit: cover; }
+
+/* =====================
+   Image link
+===================== */
+.YT-img {
+  width: 300px;
+}
+
+/* =====================
+   Gallery
+===================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.gallery img {
+  height: 120px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+/* =====================
+   Figure
+===================== */
+figure {
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 6px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* =====================
+   Local image card
+===================== */
+.local-image {
+  background-image: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin: 30px 0;
+  text-decoration: none;
+  color: #2563eb;
+}
