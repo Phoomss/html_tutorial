@@ -29,6 +29,11 @@ code {
   text-align: center;
   padding: 20px;
   color: rgb(227, 5, 157);
+  background: #ffff;
+
+  position: fixed;
+  top:0;
+  width: 100%;
 }
 
 .sub-header {
@@ -61,7 +66,7 @@ code {
 ===================== */
 .container {
   max-width: 900px;
-  margin: 20px auto;
+  margin: 200px auto 0px;
   padding: 20px;
   background: #e5e2e2;
   border-radius: 8px;
