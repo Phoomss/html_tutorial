@@ -1,12 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test 01</title>
+    <title>Document</title>
 </head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: purple;
+    }
+
+    .navbar {
+        background-color: rgb(1, 105, 169);
+    }
+
+    .navbar h1 {
+        text-align: center;
+        color: white;
+        padding: 10px;
+        font-size: 40px;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .menu-card {
+        margin-top: 30px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 25px;
+    }
+
+    .menu-card ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .menu-card li {
+        padding: 10px;
+        background-color: #7cbaef;
+        border-radius: 10px;
+        padding: 15px;
+
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .menu-card a {
+        text-decoration: none;
+        color: rgb(12, 80, 226);
+        font-size: 16px;
+    }
+
+    .menu-card li:hover {
+        transform: translateY(-6px);
+        background-color: orange;
+
+         box-shadow: 0px 1px 30px 10px gold;
+    }
+
+    .student-info {
+        margin-top: 30px;
+        background-color: rgb(255, 255, 255);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        padding: 20px;
+        border-radius: 10px;
+
+    }
+
+    .student-details {
+        background-color: rgb(222, 104, 0);
+        padding: 30px;
+        border-radius: 10px;
+        width: 500px;
+
+        box-shadow: 0 8px 10px -6px black;
+    }
+
+    .student-details p {
+        font-size: 16px;
+        color: white;
+        padding-bottom: 10px;
+    }
+
+    .github code {
+        background-color: gray;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 5px;
+    }
+
+    .student-name {
+        padding: 10px 0;
+        border-bottom: 2px solid #ddd;
+        color: white;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+
+    .student-photo {
+        margin: 0;
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        overflow: hidden;
+        border: 2px solid #ddd;
+        flex-shrink: 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .student-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.25s ease;
+    }
+
+    .student-photo:hover {
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+    }
+
+    .student-photo:hover img {
+        transform: scale(1.08);
+    }
+
+    .grade-card {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .grade {
+        background-color: rgb(104, 211, 236);
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 24px;
+    }
+
+    .grade span {
+        color: red;
+    }
+
+    .result-grade {
+        margin-top: 30px;
+        background-color: rgb(255, 0, 0);
+        border-radius: 10px;
+        padding: 20px;
+        color: white;
+        box-shadow: 0px 1px 30px 10px gold;
+    }
+
+    .result-grade h2 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    footer {
+        margin-top: 30px;
+        background-color: rgb(1, 105, 169);
+        padding: 20px;
+        text-align: center;
+        font-size: 16px;
+        color: white;
+    }
+</style>
+
 <body>
-    
-    
+    <div class="navbar">
+        <h1>📊 รายงานผลเกรด</h1>
+    </div>
+
+    <div class="container">
+        <div class="menu-card">
+            <ul>
+                <li><a href="" class="btn-menu">🤵 ข้อมูลนักศึกษา</a></li>
+                <li><a href="" class="btn-menu">📊 ผลการเรียน</a></li>
+                <li><a href="" class="btn-menu">📞 ติดต่อ</a></li>
+            </ul>
+        </div>
+
+        <div class="student-info">
+            <div class="student-details">
+                <h5 class="student-name">🤵 Mr.Naromgsak Pumpasert</h5>
+                <div class="grid">
+                    <div class="group-left">
+                        <p class="student-id">📚 รหัสนักศึกษา:</p>
+                        <p class="fullname">👲 ชื่อ-นามสกุล:</p>
+                        <p class="section">🧑‍🎓 หมู่เรียน:</p>
+                        <p class="teacher">🧑‍🏫 อาจารย์ที่ปรึกษา:</p>
+                        <p class="github">🔗 GitHub:</p>
+                    </div>
+
+                    <div class="group-right">
+                        <p class="student-id">674259009</p>
+                        <p class="fullname">นรงศ์ศักดิ์ ภูมิประเสริฐ</p>
+                        <p class="section">67/50</p>
+                        <p class="teacher">อาจารย์ ดร.อุษณีย์ ภักดีตระกูลวงศ์</p>
+                        <p class="github"><code>https://github.com/Phoomss</code></p>
+                    </div>
+                </div>
+            </div>
+            <figure class="student-photo">
+                <img src="images/image_info.jpg" alt="Student Photo" />
+            </figure>
+        </div>
+
+        <div class="grade-card">
+            <p class="grade">📙 ปี 1 เทอม 1 : <span>3.91</span></p>
+            <p class="grade">📘 ปี 1 เทอม 2 : <span>3.78</span></p>
+            <p class="grade">📗 ปี 2 เทอม 1 : <span>3.90</span></p>
+        </div>
+
+        <div class="result-grade">
+            <h2>
+                🏆 เกรดเฉลี่ยนสะสม: 3.90
+            </h2>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            &copy;2026 Webmaster by Narongsak Pumpasert. ID 674259009
+        </p>
+        <p>
+            Nakhon Pathom Rajabhat University
+        </p>
+    </footer>
 </body>
+
 </html>
