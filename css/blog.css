@@ -413,6 +413,89 @@ nav ul li a:hover {
   border-left: 4px solid #ff9800;
 }
 
+/* ===== GOLD TABLE ===== */
+.gold-table {
+  font-size: 0.9rem;
+}
+
+.gold-table thead tr:first-child th {
+  background: #d32f2f;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.gold-table thead tr:first-child th:first-child {
+  background: #fce4e4;
+  color: #333;
+}
+
+.gold-table thead tr:last-child th {
+  background: #f5b5b5;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.gold-table .year-header {
+  border-right: 2px solid #fff;
+}
+
+.gold-table th.th-sub {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #666;
+}
+
+.gold-table .month-col {
+  font-weight: 700;
+  background: #fce4e4;
+  color: #b71c1c;
+  text-align: center;
+}
+
+.gold-table td {
+  text-align: right;
+  background: #fff;
+}
+
+.gold-table tbody tr:nth-child(even) td {
+  background: #fff8f8;
+}
+
+.gold-table tbody tr:nth-child(even) .month-col {
+  background: #f8d7d7;
+}
+
+.gold-table .total-row td {
+  font-weight: 700;
+  background: #fce4e4 !important;
+  border-top: 2px solid #f5b5b5;
+}
+
+.gold-table .up {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.gold-table .down {
+  color: #c62828;
+  font-weight: 600;
+}
+
+.gold-table .highlight-green {
+  background: #c8e6c9 !important;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.gold-table .highlight-pink {
+  background: #ffcdd2 !important;
+  font-weight: 700;
+  color: #b71c1c;
+}
+
 /* ===== CONTACT FORM ===== */
 .contact-form {
   margin-top: 20px;
