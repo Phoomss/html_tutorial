@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📚 Web Dev Study Book — แนวข้อสอบปลายภาค</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&family=Kanit:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="web_book.css">
+  </head>
+  <body>
+    <div
+      class="mob-menu"
+      onclick="document.querySelector('.sidebar').classList.toggle('open')"
+    >
+      ☰
+    </div>
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+      <div class="sidebar-logo">
+        <div class="title">📚 Web Dev<br />Study Book</div>
+        <div class="sub">แนวข้อสอบปลายภาค · 1 ชม.</div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">เนื้อหา</div>
+        <a class="nav-item active" href="#html"
+          ><span class="nav-icon">🏗️</span> HTML พื้นฐาน</a
+        >
+        <a class="nav-item" href="#form"
+          ><span class="nav-icon">📝</span> Form</a
+        >
+        <a class="nav-item" href="#table"
+          ><span class="nav-icon">📊</span> Table</a
+        >
+        <a class="nav-item" href="#css"><span class="nav-icon">🎨</span> CSS</a>
+        <a class="nav-item" href="#flexgrid"
+          ><span class="nav-icon">🔲</span> Flex & Grid</a
+        >
+        <a class="nav-item" href="#responsive"
+          ><span class="nav-icon">📱</span> Responsive</a
+        >
+        <a class="nav-item" href="#bootstrap"
+          ><span class="nav-icon">⚡</span> Bootstrap</a
+        >
+        <a class="nav-item" href="#js"
+          ><span class="nav-icon">🟨</span> JavaScript</a
+        >
+        <a class="nav-item" href="#quiz"
+          ><span class="nav-icon">🧠</span> แบบทดสอบ</a
+        >
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="main">
+      <!-- HERO -->
+      <div class="hero">
+        <h1>📚 Web Dev Study Book</h1>
+        <p>ครอบคลุมทุกหัวข้อที่ออกสอบ · อ่านให้ครบ ทำข้อสอบผ่านแน่นอน ✨</p>
+        <div class="badges">
+          <span class="badge purple">HTML</span>
+          <span class="badge pink">CSS</span>
+          <span class="badge teal">Bootstrap</span>
+          <span class="badge yellow">JavaScript</span>
+          <span class="badge purple">Form & Table</span>
+          <span class="badge teal">Responsive</span>
+        </div>
+      </div>
+
+      <!-- ──────────────────────────────────── HTML -->
+      <section class="section" id="html">
+        <div class="section-header">
+          <div class="section-icon purple">🏗️</div>
+          <div class="section-title">1. HTML พื้นฐาน</div>
+        </div>
+
+        <div class="code-block">
+          <div class="code-header">
+            <span>โครงสร้างพื้นฐาน HTML</span><span>📄 structure.html</span>
+          </div>
+          <div class="code-body">
+            <pre><span class="c">&lt;!-- โครงสร้างบังคับทุกไฟล์ --&gt;</span>
+<span class="t">&lt;!DOCTYPE html&gt;</span>
+<span class="t">&lt;html</span> <span class="a">lang</span>=<span class="v">"th"</span><span class="t">&gt;</span>
+  <span class="t">&lt;head&gt;</span>
+    <span class="t">&lt;meta</span> <span class="a">charset</span>=<span class="v">"UTF-8"</span><span class="t">&gt;</span>
+    <span class="t">&lt;meta</span> <span class="a">name</span>=<span class="v">"viewport"</span> <span class="a">content</span>=<span class="v">"width=device-width, initial-scale=1.0"</span><span class="t">&gt;</span>
+    <span class="t">&lt;title&gt;</span>ชื่อหน้า<span class="t">&lt;/title&gt;</span>
+    <span class="t">&lt;link</span> <span class="a">rel</span>=<span class="v">"stylesheet"</span> <span class="a">href</span>=<span class="v">"style.css"</span><span class="t">&gt;</span>
+  <span class="t">&lt;/head&gt;</span>
+  <span class="t">&lt;body&gt;</span>
+    <span class="c">&lt;!-- เนื้อหาอยู่ใน body --&gt;</span>
+    <span class="t">&lt;script</span> <span class="a">src</span>=<span class="v">"app.js"</span><span class="t">&gt;&lt;/script&gt;</span>  <span class="c">&lt;!-- JS ต่อท้าย body --&gt;</span>
+  <span class="t">&lt;/body&gt;</span>
+<span class="t">&lt;/html&gt;</span></pre>
+          </div>
+        </div>
+
+        <table class="data-table">
+          <tr>
+            <th>แท็ก</th>
+            <th>หน้าที่</th>
+            <th>ตัวอย่าง</th>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">&lt;h1&gt;–&lt;h6&gt;</span></td>
+            <td>หัวข้อ (h1=ใหญ่สุด)</td>
+            <td><span class="tag-pill">&lt;h1&gt;ชื่อเว็บ&lt;/h1&gt;</span></td>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">&lt;p&gt;</span></td>
+            <td>ย่อหน้าข้อความ</td>
+            <td><span class="tag-pill">&lt;p&gt;ข้อความ&lt;/p&gt;</span></td>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">&lt;a&gt;</span></td>
+            <td>ลิงก์ → ต้องมี <code>href</code></td>
+            <td>
+              <span class="tag-pill">&lt;a href="url"&gt;คลิก&lt;/a&gt;</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">&lt;img&gt;</span></td>
+            <td>รูปภาพ → <code>src</code>, <code>alt</code></td>
+            <td>
+              <span class="tag-pill">&lt;img src="pic.jpg" alt="desc"&gt;</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">&lt;div&gt;</span></td>
+            <td>กล่อง block-level</td>
+            <td>จัดกลุ่มเนื้อหา</td>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">&lt;span&gt;</span></td>
+            <td>inline container</td>
+            <td>ไฮไลต์ข้อความ</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tag-pill">&lt;ul&gt; &lt;ol&gt; &lt;li&gt;</span>
+            </td>
+            <td>รายการ (กระสุน/เลข)</td>
+            <td>เมนู, ลิสต์</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tag-pill"
+                >&lt;header&gt; &lt;footer&gt; &lt;nav&gt; &lt;main&gt;
+                &lt;section&gt;</span
+              >
+            </td>
+            <td>Semantic HTML</td>
+            <td>โครงสร้างหน้าเว็บ</td>
+          </tr>
+        </table>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Attribute สำคัญ ⚠️</h3>
+            <ul>
+              <li><strong>id</strong> — ระบุ element เดียว (ไม่ซ้ำ)</li>
+              <li><strong>class</strong> — ใช้หลาย element ได้</li>
+              <li><strong>src</strong> — ที่อยู่รูป/ไฟล์</li>
+              <li><strong>href</strong> — ลิงก์ปลายทาง</li>
+              <li><strong>alt</strong> — คำอธิบายรูป</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>จำให้ขึ้นใจ 🔥</h3>
+            <ul>
+              <li><code>#id</code> = เลือกด้วย id</li>
+              <li><code>.class</code> = เลือกด้วย class</li>
+              <li>
+                แท็กที่ไม่มีปิด:
+                <code
+                  >&lt;img&gt; &lt;input&gt; &lt;br&gt; &lt;hr&gt; &lt;meta&gt;
+                  &lt;link&gt;</code
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ──────────────────────────────────── FORM -->
+      <section class="section" id="form">
+        <div class="section-header">
+          <div class="section-icon pink">📝</div>
+          <div class="section-title">2. Form</div>
+        </div>
+
+        <div class="tip info">
+          <span class="tip-icon">💡</span>
+          <div>
+            <strong>จุดสำคัญ:</strong> method="GET" ส่งข้อมูลใน URL (เห็นได้) ·
+            method="POST" ส่งใน body (ปลอดภัยกว่า)
+          </div>
+        </div>
+
+        <div class="code-block">
+          <div class="code-header"><span>โครงสร้าง Form</span></div>
+          <div class="code-body">
+            <pre><span class="t">&lt;form</span> <span class="a">action</span>=<span class="v">"submit.php"</span> <span class="a">method</span>=<span class="v">"post"</span><span class="t">&gt;</span>
+
+  <span class="c">&lt;!-- label เชื่อมกับ input ด้วย for = id --&gt;</span>
+  <span class="t">&lt;label</span> <span class="a">for</span>=<span class="v">"username"</span><span class="t">&gt;</span>ชื่อผู้ใช้:<span class="t">&lt;/label&gt;</span>
+  <span class="t">&lt;input</span> <span class="a">type</span>=<span class="v">"text"</span> <span class="a">id</span>=<span class="v">"username"</span> <span class="a">name</span>=<span class="v">"username"</span> <span class="a">placeholder</span>=<span class="v">"กรอกชื่อ"</span><span class="t">&gt;</span>
+
+  <span class="c">&lt;!-- radio: name เดียวกัน = กลุ่มเดียวกัน --&gt;</span>
+  <span class="t">&lt;input</span> <span class="a">type</span>=<span class="v">"radio"</span> <span class="a">name</span>=<span class="v">"gender"</span> <span class="a">value</span>=<span class="v">"male"</span> <span class="a">id</span>=<span class="v">"male"</span><span class="t">&gt;</span>
+  <span class="t">&lt;label</span> <span class="a">for</span>=<span class="v">"male"</span><span class="t">&gt;</span>ชาย<span class="t">&lt;/label&gt;</span>
+
+  <span class="t">&lt;input</span> <span class="a">type</span>=<span class="v">"radio"</span> <span class="a">name</span>=<span class="v">"gender"</span> <span class="a">value</span>=<span class="v">"female"</span> <span class="a">id</span>=<span class="v">"female"</span><span class="t">&gt;</span>
+  <span class="t">&lt;label</span> <span class="a">for</span>=<span class="v">"female"</span><span class="t">&gt;</span>หญิง<span class="t">&lt;/label&gt;</span>
+
+  <span class="c">&lt;!-- checkbox: แต่ละอันมี name-value เป็นตัวเอง --&gt;</span>
+  <span class="t">&lt;input</span> <span class="a">type</span>=<span class="v">"checkbox"</span> <span class="a">name</span>=<span class="v">"hobby"</span> <span class="a">value</span>=<span class="v">"code"</span> <span class="a">id</span>=<span class="v">"h1"</span><span class="t">&gt;</span>
+  <span class="t">&lt;label</span> <span class="a">for</span>=<span class="v">"h1"</span><span class="t">&gt;</span>เขียนโค้ด<span class="t">&lt;/label&gt;</span>
+
+  <span class="t">&lt;button</span> <span class="a">type</span>=<span class="v">"submit"</span><span class="t">&gt;</span>ส่งข้อมูล<span class="t">&lt;/button&gt;</span>
+<span class="t">&lt;/form&gt;</span></pre>
+          </div>
+        </div>
+
+        <table class="data-table">
+          <tr>
+            <th>type</th>
+            <th>ลักษณะ</th>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">text</span></td>
+            <td>กล่องข้อความทั่วไป</td>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">password</span></td>
+            <td>ซ่อนตัวอักษร</td>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">email</span></td>
+            <td>ตรวจรูปแบบอีเมลอัตโนมัติ</td>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">number</span></td>
+            <td>กรอกตัวเลข</td>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">radio</span></td>
+            <td>เลือกได้อันเดียวในกลุ่ม (name เดียวกัน)</td>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">checkbox</span></td>
+            <td>ติ๊กได้หลายอัน</td>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">submit</span></td>
+            <td>ปุ่มส่งฟอร์ม</td>
+          </tr>
+          <tr>
+            <td><span class="tag-pill">reset</span></td>
+            <td>ล้างข้อมูลในฟอร์ม</td>
+          </tr>
+        </table>
+
+        <div class="tip warn">
+          <span class="tip-icon">⚠️</span>
+          <div>
+            <strong>จำไว้:</strong> <code>for</code> ใน
+            <code>&lt;label&gt;</code> ต้องตรงกับ <code>id</code> ของ
+            <code>&lt;input&gt;</code> เสมอ ไม่ใช่ <code>name</code>!
+          </div>
+        </div>
+      </section>
+
+      <!-- ──────────────────────────────────── TABLE -->
+      <section class="section" id="table">
+        <div class="section-header">
+          <div class="section-icon teal">📊</div>
+          <div class="section-title">3. Table</div>
+        </div>
+
+        <div class="code-block">
+          <div class="code-header">
+            <span>โครงสร้าง Table + colspan + rowspan</span>
+          </div>
+          <div class="code-body">
+            <pre><span class="t">&lt;table</span> <span class="a">border</span>=<span class="v">"1"</span><span class="t">&gt;</span>
+  <span class="t">&lt;thead&gt;</span>
+    <span class="t">&lt;tr&gt;</span>
+      <span class="c">&lt;!-- colspan: รวม 2 คอลัมน์ในแนวนอน --&gt;</span>
+      <span class="t">&lt;th</span> <span class="a">colspan</span>=<span class="v">"2"</span><span class="t">&gt;</span>ชื่อ-นามสกุล<span class="t">&lt;/th&gt;</span>
+      <span class="t">&lt;th&gt;</span>คะแนน<span class="t">&lt;/th&gt;</span>
+    <span class="t">&lt;/tr&gt;</span>
+  <span class="t">&lt;/thead&gt;</span>
+  <span class="t">&lt;tbody&gt;</span>
+    <span class="t">&lt;tr&gt;</span>
+      <span class="c">&lt;!-- rowspan: รวม 2 แถวในแนวตั้ง --&gt;</span>
+      <span class="t">&lt;td</span> <span class="a">rowspan</span>=<span class="v">"2"</span><span class="t">&gt;</span>สมชาย<span class="t">&lt;/td&gt;</span>
+      <span class="t">&lt;td&gt;</span>ใจดี<span class="t">&lt;/td&gt;</span>
+      <span class="t">&lt;td&gt;</span>90<span class="t">&lt;/td&gt;</span>
+    <span class="t">&lt;/tr&gt;</span>
+    <span class="t">&lt;tr&gt;</span>
+      <span class="c">&lt;!-- ไม่ต้องใส่ td แรก เพราะถูก rowspan ครอบแล้ว --&gt;</span>
+      <span class="t">&lt;td&gt;</span>รักเรียน<span class="t">&lt;/td&gt;</span>
+      <span class="t">&lt;td&gt;</span>85<span class="t">&lt;/td&gt;</span>
+    <span class="t">&lt;/tr&gt;</span>
+  <span class="t">&lt;/tbody&gt;</span>
+<span class="t">&lt;/table&gt;</span></pre>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Tags ใน Table</h3>
+            <ul>
+              <li><code>&lt;table&gt;</code> — ตาราง (ห่อทั้งหมด)</li>
+              <li><code>&lt;thead&gt;</code> — ส่วนหัวตาราง</li>
+              <li><code>&lt;tbody&gt;</code> — ส่วนเนื้อหา</li>
+              <li><code>&lt;tr&gt;</code> — แถว (table row)</li>
+              <li><code>&lt;th&gt;</code> — เซลล์หัว (bold+center)</li>
+              <li><code>&lt;td&gt;</code> — เซลล์ข้อมูล</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>colspan vs rowspan</h3>
+            <ul>
+              <li><strong>colspan="2"</strong> → รวม 2 คอลัมน์ (แนวนอน ↔)</li>
+              <li><strong>rowspan="3"</strong> → รวม 3 แถว (แนวตั้ง ↕)</li>
+              <li>เมื่อ rowspan ครอบแถวถัดไป → แถวถัดไปมี td น้อยลง 1</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ──────────────────────────────────── CSS -->
+      <section class="section" id="css">
+        <div class="section-header">
+          <div class="section-icon yellow">🎨</div>
+          <div class="section-title">4. CSS พื้นฐาน</div>
+        </div>
+
+        <div class="code-block">
+          <div class="code-header">
+            <span>Selector + Properties สำคัญ</span>
+          </div>
+          <div class="code-body">
+            <pre><span class="c">/* Selector แบบต่าง ๆ */</span>
+<span class="s">h1</span>          <span class="fn">{ </span><span class="p">color</span><span class="fn">: red; }</span>           <span class="c">/* tag selector */</span>
+<span class="s">.card</span>       <span class="fn">{ </span><span class="p">padding</span><span class="fn">: 1rem; }</span>       <span class="c">/* class selector */</span>
+<span class="s">#header</span>     <span class="fn">{ </span><span class="p">background</span><span class="fn">: blue; }</span>    <span class="c">/* id selector */</span>
+<span class="s">.card.box</span>   <span class="fn">{ </span><span class="p">border</span><span class="fn">: 1px solid; }</span>  <span class="c">/* มี class ทั้งสอง */</span>
+<span class="s">.nav a</span>      <span class="fn">{ </span><span class="p">color</span><span class="fn">: white; }</span>        <span class="c">/* a ที่อยู่ใน .nav */</span>
+
+<span class="c">/* Pseudo-class & Pseudo-element */</span>
+<span class="s">a:hover</span>        <span class="fn">{ </span><span class="p">color</span><span class="fn">: orange; }</span>     <span class="c">/* เมื่อ hover */</span>
+<span class="s">.btn::before</span>   <span class="fn">{ </span><span class="p">content</span><span class="fn">: "★"; }</span>    <span class="c">/* เพิ่ม content ก่อน element */</span>
+
+<span class="c">/* Transition */</span>
+<span class="s">.btn</span> <span class="fn">{</span>
+  <span class="p">background</span><span class="fn">: blue;</span>
+  <span class="p">transition</span><span class="fn">: background 0.3s ease;</span>  <span class="c">/* animate เมื่อค่าเปลี่ยน */</span>
+<span class="fn">}</span>
+<span class="s">.btn:hover</span> <span class="fn">{ </span><span class="p">background</span><span class="fn">: darkblue; }</span></pre>
+          </div>
+        </div>
+
+        <table class="data-table">
+          <tr>
+            <th>Property</th>
+            <th>ความหมาย</th>
+            <th>ตัวอย่าง</th>
+          </tr>
+          <tr>
+            <td><code>display: block</code></td>
+            <td>กินเต็มแถว</td>
+            <td>div, p, h1</td>
+          </tr>
+          <tr>
+            <td><code>display: inline</code></td>
+            <td>อยู่ในบรรทัด ไม่มีความกว้าง/สูง</td>
+            <td>span, a, strong</td>
+          </tr>
+          <tr>
+            <td><code>display: inline-block</code></td>
+            <td>inline แต่กำหนดขนาดได้</td>
+            <td>ปุ่ม, รูปภาพ</td>
+          </tr>
+          <tr>
+            <td><code>display: flex</code></td>
+            <td>Flexbox layout</td>
+            <td>จัดเรียงแนวนอน/ตั้ง</td>
+          </tr>
+          <tr>
+            <td><code>display: grid</code></td>
+            <td>Grid layout</td>
+            <td>จัดตาราง</td>
+          </tr>
+        </table>
+
+        <div class="card">
+          <h3>หน่วย CSS ที่ต้องรู้</h3>
+          <ul>
+            <li><strong>px</strong> — pixel คงที่ ไม่เปลี่ยนตามขนาดหน้าจอ</li>
+            <li>
+              <strong>rem</strong> — สัมพันธ์กับ font-size ของ root (html) ·
+              1rem = 16px โดยทั่วไป
+            </li>
+            <li><strong>%</strong> — สัมพัทธ์กับ parent element</li>
+            <li><strong>vw / vh</strong> — % ของความกว้าง/สูงของ viewport</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ──────────────────────────────────── FLEX & GRID -->
+      <section class="section" id="flexgrid">
+        <div class="section-header">
+          <div class="section-icon purple">🔲</div>
+          <div class="section-title">5. Flexbox & Grid</div>
+        </div>
+
+        <div class="code-block">
+          <div class="code-header"><span>Flexbox</span></div>
+          <div class="code-body">
+            <pre><span class="s">.container</span> <span class="fn">{</span>
+  <span class="p">display</span><span class="fn">: flex;</span>
+  <span class="p">flex-direction</span><span class="fn">: row;</span>          <span class="c">/* row | column */</span>
+  <span class="p">justify-content</span><span class="fn">: space-between;</span> <span class="c">/* จัด main axis */</span>
+  <span class="p">align-items</span><span class="fn">: center;</span>           <span class="c">/* จัด cross axis */</span>
+  <span class="p">flex-wrap</span><span class="fn">: wrap;</span>               <span class="c">/* ตัดบรรทัดถ้าล้น */</span>
+  <span class="p">gap</span><span class="fn">: 1rem;</span>                      <span class="c">/* ช่องว่างระหว่าง items */</span>
+<span class="fn">}</span>
+
+<span class="s">.item</span> <span class="fn">{</span>
+  <span class="p">flex</span><span class="fn">: 1;</span>   <span class="c">/* ขยายเต็มพื้นที่ที่เหลือ (เท่า ๆ กัน) */</span>
+<span class="fn">}</span></pre>
+          </div>
+        </div>
+
+        <div class="tip note">
+          <span class="tip-icon">📌</span>
+          <div>
+            <strong>justify-content ค่าสำคัญ:</strong> <code>flex-start</code> |
+            <code>flex-end</code> | <code>center</code> |
+            <code>space-between</code> | <code>space-around</code>
+          </div>
+        </div>
+
+        <div class="code-block">
+          <div class="code-header"><span>CSS Grid</span></div>
+          <div class="code-body">
+            <pre><span class="s">.grid</span> <span class="fn">{</span>
+  <span class="p">display</span><span class="fn">: grid;</span>
+  <span class="p">grid-template-columns</span><span class="fn">: 1fr 1fr 1fr;</span>  <span class="c">/* 3 คอลัมน์เท่ากัน */</span>
+  <span class="p">grid-template-columns</span><span class="fn">: repeat(3, 1fr);</span> <span class="c">/* เขียนย่อ */</span>
+  <span class="p">gap</span><span class="fn">: 1rem;</span>
+<span class="fn">}</span></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ──────────────────────────────────── RESPONSIVE -->
+      <section class="section" id="responsive">
+        <div class="section-header">
+          <div class="section-icon pink">📱</div>
+          <div class="section-title">6. Responsive Design</div>
+        </div>
+
+        <div class="code-block">
+          <div class="code-header"><span>Media Query</span></div>
+          <div class="code-body">
+            <pre><span class="c">/* ค่าปกติ → desktop first */</span>
+<span class="s">.card</span> <span class="fn">{ </span><span class="p">width</span><span class="fn">: 300px; }</span>
+
+<span class="c">/* เมื่อหน้าจอ ≤ 768px (tablet/mobile) */</span>
+<span class="kw">@media</span> <span class="fn">(</span><span class="p">max-width</span><span class="fn">: 768px) {</span>
+  <span class="s">.card</span> <span class="fn">{ </span><span class="p">width</span><span class="fn">: 100%; }</span>
+<span class="fn">}</span>
+
+<span class="c">/* เมื่อหน้าจอ ≥ 992px (desktop) */</span>
+<span class="kw">@media</span> <span class="fn">(</span><span class="p">min-width</span><span class="fn">: 992px) {</span>
+  <span class="s">.sidebar</span> <span class="fn">{ </span><span class="p">display</span><span class="fn">: block; }</span>
+<span class="fn">}</span></pre>
+          </div>
+        </div>
+
+        <div class="responsive-demo">
+          <div style="display: flex; gap: 0.4rem">
+            <div class="resp-item" style="background: #6c63ff; flex: 1">
+              col-12<br /><small>mobile</small>
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.4rem">
+            <div class="resp-item" style="background: #ff6b9d; flex: 1">
+              col-6
+            </div>
+            <div class="resp-item" style="background: #ff6b9d; flex: 1">
+              col-6
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.4rem">
+            <div
+              class="resp-item"
+              style="background: #43e8c6; color: #0d0f1a; flex: 1"
+            >
+              col-4
+            </div>
+            <div
+              class="resp-item"
+              style="background: #43e8c6; color: #0d0f1a; flex: 1"
+            >
+              col-4
+            </div>
+            <div
+              class="resp-item"
+              style="background: #43e8c6; color: #0d0f1a; flex: 1"
+            >
+              col-4
+            </div>
+          </div>
+          <div
+            style="
+              font-size: 0.7rem;
+              color: var(--text-muted);
+              text-align: center;
+            "
+          >
+            Bootstrap Grid 12 คอลัมน์
+          </div>
+        </div>
+      </section>
+
+      <!-- ──────────────────────────────────── BOOTSTRAP -->
+      <section class="section" id="bootstrap">
+        <div class="section-header">
+          <div class="section-icon teal">⚡</div>
+          <div class="section-title">7. Bootstrap</div>
+        </div>
+
+        <div class="code-block">
+          <div class="code-header"><span>Bootstrap Grid System</span></div>
+          <div class="code-body">
+            <pre><span class="c">&lt;!-- Grid 12 คอลัมน์ --&gt;</span>
+<span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"container"</span><span class="t">&gt;</span>          <span class="c">&lt;!-- จำกัดความกว้าง, center --&gt;</span>
+  <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"row"</span><span class="t">&gt;</span>               <span class="c">&lt;!-- แถว flex --&gt;</span>
+    <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"col-6"</span><span class="t">&gt;</span>ครึ่งซ้าย<span class="t">&lt;/div&gt;</span>   <span class="c">&lt;!-- 6/12 = 50% --&gt;</span>
+    <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"col-6"</span><span class="t">&gt;</span>ครึ่งขวา<span class="t">&lt;/div&gt;</span>
+  <span class="t">&lt;/div&gt;</span>
+  <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"row"</span><span class="t">&gt;</span>
+    <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"col-md-4"</span><span class="t">&gt;</span>3 คอลัมน์<span class="t">&lt;/div&gt;</span>  <span class="c">&lt;!-- ≥md=4/12, &lt;md=12/12 --&gt;</span>
+    <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"col-md-4"</span><span class="t">&gt;</span>3 คอลัมน์<span class="t">&lt;/div&gt;</span>
+    <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"col-md-4"</span><span class="t">&gt;</span>3 คอลัมน์<span class="t">&lt;/div&gt;</span>
+  <span class="t">&lt;/div&gt;</span>
+<span class="t">&lt;/div&gt;</span></pre>
+          </div>
+        </div>
+
+        <table class="data-table">
+          <tr>
+            <th>Class</th>
+            <th>ความหมาย</th>
+          </tr>
+          <tr>
+            <td><span class="class-pill">container</span></td>
+            <td>กล่องกลาง มีความกว้างจำกัด</td>
+          </tr>
+          <tr>
+            <td><span class="class-pill">container-fluid</span></td>
+            <td>กว้างเต็ม 100%</td>
+          </tr>
+          <tr>
+            <td><span class="class-pill">row</span></td>
+            <td>แถวใน grid (ใช้ flexbox)</td>
+          </tr>
+          <tr>
+            <td><span class="class-pill">col-6</span></td>
+            <td>6/12 = 50% ทุกขนาดหน้าจอ</td>
+          </tr>
+          <tr>
+            <td><span class="class-pill">col-md-4</span></td>
+            <td>4/12 เมื่อ ≥768px, เต็มเมื่อน้อยกว่า</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="class-pill">d-flex</span> /
+              <span class="class-pill">d-none</span>
+            </td>
+            <td>display:flex / display:none</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="class-pill">mt-3</span> /
+              <span class="class-pill">p-2</span>
+            </td>
+            <td>
+              margin-top:1rem / padding:.5rem (1=.25, 2=.5, 3=1, 4=1.5, 5=3rem)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="class-pill">text-center</span> /
+              <span class="class-pill">text-end</span>
+            </td>
+            <td>จัดข้อความ</td>
+          </tr>
+          <tr>
+            <td><span class="class-pill">btn btn-primary</span></td>
+            <td>ปุ่มสีน้ำเงิน Bootstrap</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="class-pill">bg-primary</span> /
+              <span class="class-pill">text-danger</span>
+            </td>
+            <td>สีพื้นหลัง / สีข้อความ</td>
+          </tr>
+        </table>
+
+        <div class="tip note">
+          <span class="tip-icon">🎨</span>
+          <div>
+            <strong>สี Bootstrap:</strong> primary (น้ำเงิน) · secondary (เทา) ·
+            success (เขียว) · danger (แดง) · warning (เหลือง) · info (ฟ้า) ·
+            light · dark
+          </div>
+        </div>
+      </section>
+
+      <!-- ──────────────────────────────────── JS -->
+      <section class="section" id="js">
+        <div class="section-header">
+          <div class="section-icon yellow">🟨</div>
+          <div class="section-title">8. JavaScript (Workshop)</div>
+        </div>
+
+        <div class="code-block">
+          <div class="code-header">
+            <span>getElementById + classList.toggle</span>
+          </div>
+          <div class="code-body">
+            <pre><span class="c">// getElementById: เลือก element ด้วย id</span>
+<span class="kw">const</span> box = document.<span class="fn">getElementById</span>(<span class="v">'myBox'</span>);
+
+<span class="c">// classList.toggle: เพิ่ม class ถ้าไม่มี / ลบถ้ามีอยู่</span>
+box.classList.<span class="fn">toggle</span>(<span class="v">'active'</span>);
+
+<span class="c">// ตัวอย่าง: ปุ่มเปิด/ปิด dark mode</span>
+<span class="t">&lt;button</span> <span class="a">onclick</span>=<span class="v">"toggleDark()"</span><span class="t">&gt;</span>Toggle Dark<span class="t">&lt;/button&gt;</span>
+<span class="t">&lt;div</span> <span class="a">id</span>=<span class="v">"page"</span><span class="t">&gt;</span>...<span class="t">&lt;/div&gt;</span>
+
+<span class="kw">function</span> <span class="fn">toggleDark</span>() {
+  document.<span class="fn">getElementById</span>(<span class="v">'page'</span>)
+          .classList.<span class="fn">toggle</span>(<span class="v">'dark-mode'</span>);
+}</pre>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>classList methods</h3>
+            <ul>
+              <li><code>.toggle('x')</code> → เพิ่ม/ลบสลับกัน</li>
+              <li><code>.add('x')</code> → เพิ่ม class</li>
+              <li><code>.remove('x')</code> → ลบ class</li>
+              <li><code>.contains('x')</code> → ตรวจว่ามีหรือไม่</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>DOM Selection</h3>
+            <ul>
+              <li><code>getElementById('id')</code></li>
+              <li><code>querySelector('.class')</code></li>
+              <li><code>querySelectorAll('tag')</code></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ──────────────────────────────────── QUIZ -->
+      <section class="section" id="quiz">
+        <div class="section-header">
+          <div class="section-icon pink">🧠</div>
+          <div class="section-title">9. แบบทดสอบ (คลิกเลือกคำตอบ)</div>
+        </div>
+
+        <!-- Q1 -->
+        <div class="quiz-box">
+          <div class="quiz-q">
+            1. attribute ใดของ &lt;label&gt; ที่ใช้เชื่อมกับ &lt;input&gt;?
+          </div>
+          <div class="quiz-options">
+            <div
+              class="quiz-opt"
+              onclick="answer(this, 'wrong', 'for ต่างหาก ไม่ใช่ name')"
+            >
+              <span class="quiz-label">A</span> name
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(this, 'correct', 'ถูกต้อง! for ต้องตรงกับ id ของ input')
+              "
+            >
+              <span class="quiz-label">B</span> for
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(
+                  this,
+                  'wrong',
+                  'id ใช้ระบุ element ตัวเอง ไม่ใช่เชื่อมกับ input',
+                )
+              "
+            >
+              <span class="quiz-label">C</span> id
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(
+                  this,
+                  'wrong',
+                  'value เก็บค่าของ input ไม่ใช่เชื่อม label',
+                )
+              "
+            >
+              <span class="quiz-label">D</span> value
+            </div>
+          </div>
+          <div class="quiz-feedback"></div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="quiz-box">
+          <div class="quiz-q">
+            2. <code>colspan="3"</code> ใน &lt;td&gt; หมายความว่าอะไร?
+          </div>
+          <div class="quiz-options">
+            <div
+              class="quiz-opt"
+              onclick="answer(this, 'wrong', 'rowspan คือรวมแถวแนวตั้ง')"
+            >
+              <span class="quiz-label">A</span> รวม 3 แถวในแนวตั้ง
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(this, 'correct', 'ถูกต้อง! colspan รวมคอลัมน์ในแนวนอน')
+              "
+            >
+              <span class="quiz-label">B</span> รวม 3 คอลัมน์ในแนวนอน
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="answer(this, 'wrong', 'colspan ไม่เกี่ยวกับ padding')"
+            >
+              <span class="quiz-label">C</span> เพิ่ม padding 3 หน่วย
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="answer(this, 'wrong', 'ไม่ใช่ ต้องใช้ CSS สำหรับขนาด')"
+            >
+              <span class="quiz-label">D</span> กำหนดขนาด cell = 3px
+            </div>
+          </div>
+          <div class="quiz-feedback"></div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="quiz-box">
+          <div class="quiz-q">
+            3. CSS <code>display: inline-block</code> ต่างจาก
+            <code>inline</code> อย่างไร?
+          </div>
+          <div class="quiz-options">
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(this, 'wrong', 'inline-block ยังอยู่ในบรรทัดเดียวกันได้')
+              "
+            >
+              <span class="quiz-label">A</span> กินพื้นที่เต็มแถวเหมือน block
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(
+                  this,
+                  'correct',
+                  'ถูกต้อง! inline-block อยู่ inline แต่กำหนด width/height ได้',
+                )
+              "
+            >
+              <span class="quiz-label">B</span> อยู่ inline แต่กำหนด
+              width/height ได้
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="answer(this, 'wrong', 'ไม่ใช่ ยังไม่ขึ้นบรรทัดใหม่')"
+            >
+              <span class="quiz-label">C</span> ขึ้นบรรทัดใหม่เสมอ
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="answer(this, 'wrong', 'ไม่เกี่ยวกับ flex')"
+            >
+              <span class="quiz-label">D</span> เหมือน flex โดยอัตโนมัติ
+            </div>
+          </div>
+          <div class="quiz-feedback"></div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="quiz-box">
+          <div class="quiz-q">
+            4. Bootstrap class <code>col-md-6</code> หมายความว่า?
+          </div>
+          <div class="quiz-options">
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(this, 'wrong', 'col-6 (ไม่มี md) คือ 50% ทุกขนาด')
+              "
+            >
+              <span class="quiz-label">A</span> กว้าง 50% ทุกขนาดหน้าจอ
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="answer(this, 'wrong', 'ไม่ถูก เป็น 6/12 ไม่ใช่ 6px')"
+            >
+              <span class="quiz-label">B</span> กว้าง 6px
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(
+                  this,
+                  'correct',
+                  'ถูก! md = ≥768px → 6/12=50%, น้อยกว่านั้น → 100%',
+                )
+              "
+            >
+              <span class="quiz-label">C</span> กว้าง 50% เมื่อหน้าจอ ≥768px,
+              เต็มเมื่อเล็กกว่า
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(this, 'wrong', 'ไม่ใช่ col-md-6 ไม่เท่ากับ margin')
+              "
+            >
+              <span class="quiz-label">D</span> margin 6 หน่วย
+            </div>
+          </div>
+          <div class="quiz-feedback"></div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="quiz-box">
+          <div class="quiz-q">
+            5. <code>classList.toggle('dark')</code> ทำงานอย่างไร?
+          </div>
+          <div class="quiz-options">
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(this, 'wrong', 'ไม่ใช่ toggle จะเพิ่มหรือลบสลับกัน')
+              "
+            >
+              <span class="quiz-label">A</span> เพิ่ม class 'dark' เสมอ
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="answer(this, 'wrong', 'ไม่ใช่ remove ลบเสมอ')"
+            >
+              <span class="quiz-label">B</span> ลบ class 'dark' เสมอ
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(
+                  this,
+                  'correct',
+                  'ถูก! toggle = ถ้าไม่มีก็เพิ่ม, ถ้ามีอยู่แล้วก็ลบ',
+                )
+              "
+            >
+              <span class="quiz-label">C</span> ถ้ามี class 'dark' ให้ลบ
+              ถ้าไม่มีให้เพิ่ม
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(this, 'wrong', 'ไม่ใช่ ต้องใช้ contains สำหรับตรวจ')
+              "
+            >
+              <span class="quiz-label">D</span> ตรวจว่ามี class 'dark' หรือไม่
+            </div>
+          </div>
+          <div class="quiz-feedback"></div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="quiz-box">
+          <div class="quiz-q">
+            6. <code>.card.module-1</code> ใน CSS เลือก element ใด?
+          </div>
+          <div class="quiz-options">
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(
+                  this,
+                  'wrong',
+                  'นั่นคือ .card .module-1 (มีช่องว่าง = descendant)',
+                )
+              "
+            >
+              <span class="quiz-label">A</span> .module-1 ที่อยู่ข้างใน .card
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(
+                  this,
+                  'correct',
+                  'ถูก! ไม่มีช่วงว่าง = element ที่มีทั้ง class card และ module-1',
+                )
+              "
+            >
+              <span class="quiz-label">B</span> element ที่มีทั้ง class "card"
+              และ "module-1" พร้อมกัน
+            </div>
+            <div class="quiz-opt" onclick="answer(this, 'wrong', 'ไม่ถูก')">
+              <span class="quiz-label">C</span> เฉพาะ .card เท่านั้น
+            </div>
+            <div class="quiz-opt" onclick="answer(this, 'wrong', 'ไม่ถูก')">
+              <span class="quiz-label">D</span> เฉพาะ .module-1 เท่านั้น
+            </div>
+          </div>
+          <div class="quiz-feedback"></div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="quiz-box">
+          <div class="quiz-q">
+            7. <code>flex: 1</code> บน flex item ทำงานอย่างไร?
+          </div>
+          <div class="quiz-options">
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(this, 'wrong', 'ไม่ใช่ flex:1 ไม่กำหนดจำนวน column')
+              "
+            >
+              <span class="quiz-label">A</span> ทำให้มี 1 คอลัมน์
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="answer(this, 'wrong', 'ไม่ใช่ ขึ้นกับ flex-direction')"
+            >
+              <span class="quiz-label">B</span> จัด item ในแนวตั้งเสมอ
+            </div>
+            <div
+              class="quiz-opt"
+              onclick="
+                answer(
+                  this,
+                  'correct',
+                  'ถูก! flex:1 คือขยายเต็มพื้นที่ที่เหลือ (แบ่งเท่า ๆ กัน)',
+                )
+              "
+            >
+              <span class="quiz-label">C</span> ขยายใช้พื้นที่ที่เหลือเท่า ๆ กับ
+              item อื่น
+            </div>
+            <div class="quiz-opt" onclick="answer(this, 'wrong', 'ไม่ใช่')">
+              <span class="quiz-label">D</span> กำหนดความสูง 1rem
+            </div>
+          </div>
+          <div class="quiz-feedback"></div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Quiz
+      function answer(el, type, msg) {
+        const box = el.closest(".quiz-box");
+        if (box.dataset.answered) return;
+        box.dataset.answered = "1";
+        el.classList.add(type);
+        const fb = box.querySelector(".quiz-feedback");
+        fb.textContent = (type === "correct" ? "✅ " : "❌ ") + msg;
+        fb.className =
+          "quiz-feedback show " + (type === "correct" ? "ok" : "err");
+      }
+
+      // Nav active
+      const sections = document.querySelectorAll(".section");
+      const navItems = document.querySelectorAll(".nav-item");
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((s) => {
+          if (window.scrollY >= s.offsetTop - 100) current = s.id;
+        });
+        navItems.forEach((n) => {
+          n.classList.toggle(
+            "active",
+            n.getAttribute("href") === "#" + current,
+          );
+        });
+      });
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          document
+            .querySelector(a.getAttribute("href"))
+            ?.scrollIntoView({ behavior: "smooth" });
+          document.querySelector(".sidebar")?.classList.remove("open");
+        });
+      });
+    </script>
+  </body>
+</html>

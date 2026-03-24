@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>นครปฐม — ดินแดนแห่งพุทธธรรม</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="test_final.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="nav-logo">นครปฐม ✦</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#places">สถานที่</a></li>
+        <li><a href="#seasonal">ฤดูกาล</a></li>
+        <li><a href="#food">อาหาร</a></li>
+        <li><a href="#tips">เคล็ดลับ</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+
+      <svg
+        class="stupa-silhouette"
+        viewBox="0 0 600 480"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="white"
+      >
+        <ellipse cx="300" cy="460" rx="220" ry="22" />
+        <rect x="190" y="350" width="220" height="110" rx="4" />
+        <polygon points="300,20 150,350 450,350" />
+        <rect x="270" y="0" width="60" height="80" rx="2" />
+        <ellipse cx="300" cy="20" rx="30" ry="12" />
+      </svg>
+
+      <div class="hero-content">
+        <div class="hero-badge">✦ ยินดีต้อนรับสู่ ✦</div>
+        <h1 class="hero-title">นคร<span>ปฐม</span></h1>
+        <p class="hero-sub">
+          ดินแดนแห่งพุทธธรรม · เมืองเก่าแก่ที่สุดในสยาม · หัวใจแห่งอารยธรรม
+        </p>
+        <a href="#places" class="hero-cta">เริ่มสำรวจ →</a>
+      </div>
+
+      <div class="scroll-hint">เลื่อนดู</div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+      <div class="intro-inner">
+        <div class="reveal">
+          <div class="section-label">เกี่ยวกับจังหวัด</div>
+          <h2 class="section-title" style="color: #fff">
+            เมืองโบราณ<br />แห่งสยามประเทศ
+          </h2>
+          <p class="section-desc">
+            นครปฐมเป็นจังหวัดที่มีประวัติศาสตร์ยาวนานกว่า 2,000 ปี
+            เชื่อกันว่าเป็นที่ตั้งของอาณาจักรทวารวดีอันรุ่งเรือง
+            ดินแดนที่พระพุทธศาสนาเฟื่องฟูมาแต่โบราณกาล
+            และเป็นที่ตั้งของพระปฐมเจดีย์ — เจดีย์ที่สูงที่สุดในประเทศไทย
+            ห่างจากกรุงเทพฯ เพียง 56 กม. เหมาะแก่การเที่ยวแบบวันเดียวได้สบาย
+          </p>
+        </div>
+        <div class="intro-stats reveal">
+          <div class="stat-card">
+            <div class="stat-num">127 ม.</div>
+            <div class="stat-label">ความสูงพระปฐมเจดีย์</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">2,000+</div>
+            <div class="stat-label">ปีประวัติศาสตร์</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">7</div>
+            <div class="stat-label">อำเภอน่าเที่ยว</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">56 กม.</div>
+            <div class="stat-label">ห่างจากกรุงเทพฯ</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLACES -->
+    <section class="places" id="places">
+      <div class="places-inner">
+        <div class="places-header reveal">
+          <div>
+            <div class="section-label">สถานที่ท่องเที่ยว</div>
+            <h2 class="section-title" style="color: var(--deep)">
+              จุดหมายปลายทาง<br />ที่ไม่ควรพลาด
+            </h2>
+          </div>
+          <div class="filter-tabs">
+            <button class="tab active" onclick="filterPlaces('all', this)">
+              ทั้งหมด
+            </button>
+            <button class="tab" onclick="filterPlaces('temple', this)">
+              วัด / ศาสนา
+            </button>
+            <button class="tab" onclick="filterPlaces('nature', this)">
+              ธรรมชาติ
+            </button>
+            <button class="tab" onclick="filterPlaces('culture', this)">
+              วัฒนธรรม
+            </button>
+          </div>
+        </div>
+
+        <div class="places-grid" id="placesGrid">
+          <div class="place-card featured reveal" data-cat="temple">
+            <div
+              class="card-emoji-img"
+              style="background: linear-gradient(135deg, #2c1a05, #7a4a10)"
+            >
+              🛕
+            </div>
+            <div class="card-category">วัดสำคัญ ✦</div>
+            <div class="card-body">
+              <h3 class="card-title">พระปฐมเจดีย์</h3>
+              <p class="card-desc">
+                เจดีย์ทรงระฆังที่สูงที่สุดในประเทศไทย สูงกว่า 127 เมตร
+                เป็นสัญลักษณ์สำคัญของจังหวัดและศูนย์กลางพระพุทธศาสนา
+                มีตลาดนัดที่คึกคักล้อมรอบ
+                บรรยากาศเช้าวันหยุดเต็มไปด้วยผู้มาทำบุญ
+              </p>
+              <div class="card-meta">
+                <span class="card-tag">🕐 เปิด 06:00–20:00</span>
+                <span class="card-tag">📍 อำเภอเมืองนครปฐม</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card reveal" data-cat="culture">
+            <div
+              class="card-emoji-img"
+              style="background: linear-gradient(135deg, #0a0a2e, #1a2c6b)"
+            >
+              👑
+            </div>
+            <div class="card-category">พระราชวัง</div>
+            <div class="card-body">
+              <h3 class="card-title">พระราชวังสนามจันทร์</h3>
+              <p class="card-desc">
+                พระราชวังของรัชกาลที่ 6 สถาปัตยกรรมยุโรปผสมไทย ในสวนร่มรื่น
+                มีพิพิธภัณฑ์ภายในน่าชม
+              </p>
+              <div class="card-meta">
+                <span class="card-tag">🕐 พ–อา 08:00–17:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card reveal" data-cat="culture">
+            <div
+              class="card-emoji-img"
+              style="background: linear-gradient(135deg, #1a0505, #6b1a1a)"
+            >
+              🏛️
+            </div>
+            <div class="card-category">พิพิธภัณฑ์</div>
+            <div class="card-body">
+              <h3 class="card-title">พิพิธภัณฑสถานแห่งชาติ</h3>
+              <p class="card-desc">
+                รวบรวมโบราณวัตถุสมัยทวารวดี
+                แสดงความเป็นมาของอารยธรรมลุ่มแม่น้ำท่าจีนอย่างครบถ้วน
+              </p>
+              <div class="card-meta">
+                <span class="card-tag">🕐 พ–อา 09:00–16:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card reveal" data-cat="temple">
+            <div
+              class="card-emoji-img"
+              style="background: linear-gradient(135deg, #2a1a05, #6b4a10)"
+            >
+              ⛩️
+            </div>
+            <div class="card-category">วัดสำคัญ</div>
+            <div class="card-body">
+              <h3 class="card-title">วัดไร่ขิง</h3>
+              <p class="card-desc">
+                วัดดังริมแม่น้ำท่าจีน ประดิษฐานหลวงพ่อวัดไร่ขิงอันศักดิ์สิทธิ์
+                ตลาดน้ำคึกคักทุกสุดสัปดาห์
+              </p>
+              <div class="card-meta">
+                <span class="card-tag">📍 อ.สามพราน</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card reveal" data-cat="nature">
+            <div
+              class="card-emoji-img"
+              style="background: linear-gradient(135deg, #062010, #0f4a2a)"
+            >
+              🌿
+            </div>
+            <div class="card-category">ธรรมชาติ</div>
+            <div class="card-body">
+              <h3 class="card-title">สวนสามพราน</h3>
+              <p class="card-desc">
+                รีสอร์ทออร์แกนิกริมแม่น้ำ ฟาร์มสด อาหารท้องถิ่น กิจกรรมครอบครัว
+                ยามเช้าบรรยากาศดีมาก
+              </p>
+              <div class="card-meta">
+                <span class="card-tag">📍 อ.สามพราน</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card reveal" data-cat="nature">
+            <div
+              class="card-emoji-img"
+              style="background: linear-gradient(135deg, #0a1a2a, #1a4a6b)"
+            >
+              🚣
+            </div>
+            <div class="card-category">ตลาดน้ำ</div>
+            <div class="card-body">
+              <h3 class="card-title">ตลาดน้ำดอนหวาย</h3>
+              <p class="card-desc">
+                ตลาดน้ำริมคลองเก่าแก่ บรรยากาศไทยแท้ อาหารสดพื้นบ้านมากมาย
+                ล่องเรือชมวิวสองฝั่งได้
+              </p>
+              <div class="card-meta">
+                <span class="card-tag">🕐 ส–อา 08:00–17:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card reveal" data-cat="temple">
+            <div
+              class="card-emoji-img"
+              style="background: linear-gradient(135deg, #1a2c10, #3d6b2a)"
+            >
+              🌳
+            </div>
+            <div class="card-category">วัดโบราณ</div>
+            <div class="card-body">
+              <h3 class="card-title">วัดพระงาม</h3>
+              <p class="card-desc">
+                วัดสมัยทวารวดี พระพุทธรูปหินปูนสลักงดงาม บรรยากาศร่มรื่น
+                สงบเหมาะแก่การนั่งสมาธิ
+              </p>
+              <div class="card-meta">
+                <span class="card-tag">📍 อ.เมือง</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card reveal" data-cat="nature">
+            <div
+              class="card-emoji-img"
+              style="background: linear-gradient(135deg, #0a1a05, #2a4a15)"
+            >
+              🐄
+            </div>
+            <div class="card-category">เกษตรท่องเที่ยว</div>
+            <div class="card-body">
+              <h3 class="card-title">ฟาร์มโชคชัย</h3>
+              <p class="card-desc">
+                ฟาร์มโคนมขนาดใหญ่ ไอศกรีมสดชวนลิ้มลอง กิจกรรมให้อาหารสัตว์
+                ทุ่งสีเขียวสุดสายตา
+              </p>
+              <div class="card-meta">
+                <span class="card-tag">📍 อ.นครชัยศรี</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card reveal" data-cat="culture">
+            <div
+              class="card-emoji-img"
+              style="background: linear-gradient(135deg, #1a0a2a, #4a1a6b)"
+            >
+              🎭
+            </div>
+            <div class="card-category">วัฒนธรรม</div>
+            <div class="card-body">
+              <h3 class="card-title">Rose Garden สามพราน</h3>
+              <p class="card-desc">
+                ศูนย์วัฒนธรรมไทย การแสดงช้าง วิถีชาวนา และวัฒนธรรมท้องถิ่น
+                เหมาะแก่ครอบครัวและนักท่องเที่ยวต่างชาติ
+              </p>
+              <div class="card-meta">
+                <span class="card-tag">📍 อ.สามพราน</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEASONAL -->
+    <section class="seasonal" id="seasonal">
+      <div class="seasonal-inner">
+        <div class="reveal">
+          <div class="section-label">ช่วงเวลาเที่ยว</div>
+          <h2 class="section-title" style="color: #fff">
+            เที่ยวได้ทุกฤดู<br />แต่ละช่วงมีเสน่ห์ต่างกัน
+          </h2>
+        </div>
+        <div class="seasons-grid reveal">
+          <div class="season-block">
+            <div class="season-icon">❄️</div>
+            <div class="season-name">ฤดูหนาว</div>
+            <div class="season-months">พ.ย. — ก.พ.</div>
+            <div class="season-tip">
+              อากาศเย็นสบายที่สุด เหมาะแก่การเดินชมวัด
+              งานนมัสการพระปฐมเจดีย์เดือนพฤศจิกายนยิ่งใหญ่มาก
+            </div>
+          </div>
+          <div class="season-block">
+            <div class="season-icon">🌸</div>
+            <div class="season-name">ต้นปี</div>
+            <div class="season-months">ก.พ. — เม.ย.</div>
+            <div class="season-tip">
+              อากาศอบอุ่น ดอกไม้บาน สงกรานต์เต็มไปด้วยเทศกาลสนุกสนาน
+              บรรยากาศไทยแท้
+            </div>
+          </div>
+          <div class="season-block">
+            <div class="season-icon">🌧️</div>
+            <div class="season-name">ฤดูฝน</div>
+            <div class="season-months">พ.ค. — ต.ค.</div>
+            <div class="season-tip">
+              ท้องทุ่งเขียวขจี เที่ยวสวนและฟาร์มสวยมาก นักท่องเที่ยวน้อยกว่า
+              ราคาที่พักประหยัดขึ้น
+            </div>
+          </div>
+          <div class="season-block">
+            <div class="season-icon">🪔</div>
+            <div class="season-name">งานเทศกาล</div>
+            <div class="season-months">พ.ย. ของทุกปี</div>
+            <div class="season-tip">
+              งานนมัสการพระปฐมเจดีย์ประจำปี 9 วัน 9 คืน มหรสพ ขบวนแห่
+              และความศรัทธาของชาวพุทธทั่วไทย
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOD -->
+    <section class="food" id="food">
+      <div class="food-inner">
+        <div class="reveal">
+          <div class="section-label">อาหารท้องถิ่น</div>
+          <h2 class="section-title" style="color: var(--deep)">
+            รสชาติแห่ง<br />นครปฐม
+          </h2>
+          <p class="section-desc">
+            อาหารท้องถิ่นนครปฐมเป็นเอกลักษณ์ มีอิทธิพลจากชุมชนจีน มอญ
+            และไทยท้องถิ่น
+          </p>
+        </div>
+        <div class="food-grid reveal">
+          <div class="food-item">
+            <div class="food-emoji">🥮</div>
+            <div>
+              <div class="food-name">ขนมตาล</div>
+              <div class="food-desc">
+                ขนมหวานไทยโบราณทำจากลูกตาล ของฝากขึ้นชื่อของจังหวัด
+                หอมหวานเป็นเอกลักษณ์ที่หาไม่ได้ที่ไหน
+              </div>
+            </div>
+          </div>
+          <div class="food-item">
+            <div class="food-emoji">🍜</div>
+            <div>
+              <div class="food-name">ก๋วยเตี๋ยวเรือ</div>
+              <div class="food-desc">
+                น้ำซุปเข้มข้นแบบดั้งเดิม บางเจ้าต้มมาหลายสิบปี
+                ต้องลองที่ตลาดน้ำดอนหวาย
+              </div>
+            </div>
+          </div>
+          <div class="food-item">
+            <div class="food-emoji">🥣</div>
+            <div>
+              <div class="food-name">แกงป่าริมวัด</div>
+              <div class="food-desc">
+                แกงป่าและแกงกะหรี่สูตรโบราณ หาได้รอบๆ พระปฐมเจดีย์
+                อร่อยราคาเป็นมิตร เช้าวันหยุดคนเยอะมาก
+              </div>
+            </div>
+          </div>
+          <div class="food-item">
+            <div class="food-emoji">🧃</div>
+            <div>
+              <div class="food-name">น้ำอ้อยคั้นสด</div>
+              <div class="food-desc">
+                ไร่อ้อยขึ้นชื่อของนครปฐม น้ำอ้อยสดหวานเย็นชื่นใจ
+                ดื่มกับน้ำแข็งในวันอากาศร้อน
+              </div>
+            </div>
+          </div>
+          <div class="food-item">
+            <div class="food-emoji">🍡</div>
+            <div>
+              <div class="food-name">ขนมครกสูตรโบราณ</div>
+              <div class="food-desc">
+                ทำสดบนเตาถ่าน กรอบนอกนุ่มในด้วยกะทิสด มีทั้งรสหวานและเค็ม
+                เจ้าดังในตลาดหน้าวัด
+              </div>
+            </div>
+          </div>
+          <div class="food-item">
+            <div class="food-emoji">🍦</div>
+            <div>
+              <div class="food-name">ไอศกรีมโคนมสด</div>
+              <div class="food-desc">
+                จากฟาร์มโคนมในจังหวัด
+                รสชาติเข้มข้นสดกว่าไอศกรีมทั่วไปอย่างเห็นได้ชัด
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPS -->
+    <section class="tips" id="tips">
+      <div class="tips-inner">
+        <div class="reveal">
+          <div class="section-label">เคล็ดลับการเที่ยว</div>
+          <h2 class="section-title" style="color: #fff">
+            เตรียมตัว<br />ก่อนเดินทาง
+          </h2>
+          <div class="tips-list">
+            <div class="tip-row">
+              <div class="tip-num">01</div>
+              <div class="tip-text">
+                <strong>การเดินทาง</strong>นั่งรถไฟจากหัวลำโพง ใช้เวลาราว 1.5
+                ชม. หรือรถตู้จากอนุสาวรีย์ชัยฯ สะดวกและประหยัด
+              </div>
+            </div>
+            <div class="tip-row">
+              <div class="tip-num">02</div>
+              <div class="tip-text">
+                <strong>การแต่งกาย</strong>เข้าวัดควรสวมเสื้อผ้าสุภาพ
+                กางเกงหรือกระโปรงยาวถึงเข่า ไม่สวมเสื้อแขนกุด
+              </div>
+            </div>
+            <div class="tip-row">
+              <div class="tip-num">03</div>
+              <div class="tip-text">
+                <strong>เวลาที่ดีที่สุด</strong>มาก่อน 9 โมงเช้า
+                เพื่อหลีกเลี่ยงฝูงชน แสงยามเช้าสวยงาม เหมาะถ่ายรูปมาก
+              </div>
+            </div>
+            <div class="tip-row">
+              <div class="tip-num">04</div>
+              <div class="tip-text">
+                <strong>ค้างคืน</strong>มีโรงแรมและรีสอร์ทหลายระดับ
+                ราคาย่อมเยากว่ากรุงเทพฯ ค้างคืน 1-2 วันได้สบาย
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="route-box reveal">
+          <div class="route-title">🗺️ เส้นทางแนะนำ 1 วัน</div>
+          <div class="route-sub">เริ่มต้นจากกรุงเทพฯ ใช้เวลา 1 วันเต็ม</div>
+
+          <div class="route-stop">
+            <div class="stop-dot"></div>
+            <div class="stop-time">08:00</div>
+            <div class="stop-name">พระปฐมเจดีย์ — ชมยามเช้าสงบ ทำบุญ</div>
+          </div>
+          <div class="route-stop">
+            <div class="stop-dot"></div>
+            <div class="stop-time">10:00</div>
+            <div class="stop-name">พิพิธภัณฑสถานแห่งชาติ — ทวารวดี</div>
+          </div>
+          <div class="route-stop">
+            <div class="stop-dot"></div>
+            <div class="stop-time">12:00</div>
+            <div class="stop-name">กินข้าวริมวัด — แกงป่า ขนมตาล น้ำอ้อย</div>
+          </div>
+          <div class="route-stop">
+            <div class="stop-dot"></div>
+            <div class="stop-time">13:30</div>
+            <div class="stop-name">พระราชวังสนามจันทร์ — พิพิธภัณฑ์</div>
+          </div>
+          <div class="route-stop">
+            <div class="stop-dot"></div>
+            <div class="stop-time">15:30</div>
+            <div class="stop-name">ตลาดน้ำดอนหวาย / วัดไร่ขิง</div>
+          </div>
+          <div class="route-stop">
+            <div class="stop-dot"></div>
+            <div class="stop-time">18:00</div>
+            <div class="stop-name">เดินทางกลับกรุงเทพฯ</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-logo">✦ นครปฐม ✦</div>
+      <p>
+        จัดทำเพื่อส่งเสริมการท่องเที่ยวจังหวัดนครปฐม<br />ดินแดนแห่งพุทธธรรม ·
+        อารยธรรมทวารวดี · หัวใจแห่งสยาม
+      </p>
+    </footer>
+
+    <script>
+      // Nav toggle mobile
+      document
+        .getElementById("navToggle")
+        .addEventListener("click", function () {
+          document.getElementById("navLinks").classList.toggle("open");
+        });
+
+      // Scroll reveal
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add("visible"), i * 90);
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.08 },
+      );
+      reveals.forEach((el) => observer.observe(el));
+
+      // Filter places
+      function filterPlaces(cat, btn) {
+        document
+          .querySelectorAll(".tab")
+          .forEach((t) => t.classList.remove("active"));
+        btn.classList.add("active");
+
+        const cards = document.querySelectorAll(".place-card");
+        cards.forEach((card) => {
+          const show = cat === "all" || card.dataset.cat === cat;
+          card.style.display = show ? "" : "none";
+          // only first card (featured) gets double-wide when showing all
+          if (cat !== "all") card.classList.remove("featured");
+          else if (card === cards[0]) card.classList.add("featured");
+        });
+      }
+    </script>
+  </body>
+</html>
