@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="เว็ปไซด์แนะนำสถานที่ท่องเที่ยวในจังหวัด พร้อมข้อมูลและภาพประกอบที่น่าสนใจ"
+    />
+    <title>Responsive Web Test (ใส่ชื่อนักศึกษา)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ให้ นศ. เพิ่มลิงค์ Google Fonts เอง 1 font -->
+
+    <!-- ตรวจสอบส่วน head ให้ดีว่ามีอะไรขาดหายไปอีกบ้าง ถ้ามีก็ใส่ให้ครบ -->
+
+    <!-- เขียน style sheet เพิ่มเติมให้ใกล้เคียงกับตัวอย่าง -->
+    <style>
+      /* ========== Reset เบื้องต้น ========== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f5f7fb;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* ========== ใช้รวม ๆ ========== */
+      .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .wraper {
+        width: 90%;
+        max-width: 1100px;
+        margin: 0 auto;
+        display: inline-flex;
+        justify-content: space-between;
+      }
+      section {
+        padding: 40px 0;
+      }
+
+      h2 {
+        line-height: 1.3;
+        color: rgb(0, 115, 255);
+      }
+
+      h3 {
+        margin-bottom: 10px;
+      }
+
+      /* ========== Header ========== */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 58px;
+      }
+
+      .brand {
+        font-family: "Playfair Display", serif;
+        color: rgb(0, 115, 255);
+        font-size: 1.1rem;
+      }
+
+      .main-nav {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      .main-nav a {
+        color: black;
+        text-decoration: none;
+        font-size: 0.85rem;
+        letter-spacing: 0.06em;
+        transition: color 0.2s;
+      }
+      .main-nav a:hover {
+        color: white;
+        border-radius: 10px;
+        padding: 1rem;
+        background: rgb(0, 115, 255);
+      }
+
+      .nav-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 4px;
+      }
+      .nav-toggle span {
+        width: 24px;
+        height: 2px;
+        background: black;
+        transition: 0.3s;
+      }
+      /* ========== Hero ========== */
+      .hero {
+        padding: 70px 0;
+        background: rgb(221, 180, 100);
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .content-detail h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .content-detail p {
+        margin-bottom: 20px;
+      }
+
+      .hero-life {
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-right img {
+        border-radius: 25px;
+        box-shadow:
+          0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .btn-primary {
+        background-color: rgb(0, 115, 255);
+        padding: 15px;
+        color: white;
+        border-radius: 10px;
+      }
+
+      .poppular {
+        text-align: center;
+        padding: 10px;
+      }
+      .title,
+      .sub-title {
+        padding: 10px;
+      }
+
+      .places-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+
+      .places-header {
+        text-align: center;
+        align-items: flex-end;
+        margin-bottom: 2.5rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .places-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.4rem;
+      }
+
+      .place-card {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        background: #fff;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .place-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+      }
+      .place-card.featured {
+        grid-column: span 2;
+      }
+
+      .card-emoji-img {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4.5rem;
+        object-fit: cover;
+      }
+      .place-card.featured .card-emoji-img {
+        height: 300px;
+      }
+
+      .card-category {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background: goldenrod;
+        color: white;
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        padding: 0.22em 0.65em;
+      }
+
+      .card-body {
+        padding: 1.3rem 1.4rem 1.5rem;
+      }
+
+      .card-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        color: var(--deep);
+        margin-bottom: 0.45rem;
+      }
+      .card-desc {
+        font-size: 0.85rem;
+        color: #7a6040;
+        line-height: 1.7;
+      }
+
+      .card-meta {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0.9rem;
+        padding-top: 0.9rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        flex-wrap: wrap;
+      }
+      .card-tag {
+        font-size: 0.74rem;
+        color: #9a7a50;
+      }
+      
+      footer {
+        background: rgb(0, 115, 255);
+        padding: 20px;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+      }
+
+      /* =====เขียน style sheet เพิ่มเติม เพื่อให้รองรับการ responsive ด้านล่าง ========== */
+
+      /* ========== โดยทุกอย่างต้องแสดงเป็น 1 คอลัมน์ เหมือนตัวอย่าง ========== */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(28px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        50% {
+          transform: translateX(-50%) translateY(-8px);
+        }
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.65s ease,
+          transform 0.65s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      /* ─── RESPONSIVE ─── */
+      @media (max-width: 900px) {
+        .intro-inner {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .places-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .place-card.featured {
+          grid-column: span 2;
+        }
+        .seasons-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .tips-inner {
+          grid-template-columns: 1fr;
+        }
+        .content {
+          display: flex;
+          flex-direction: column;
+        }
+        .hero-life {
+          order: 1;
+          margin-top: 2rem;
+        }
+        .footer {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 600px) {
+        section {
+          padding: 3.5rem 1.1rem;
+        }
+        .places-grid {
+          grid-template-columns: 1fr;
+        }
+        .place-card.featured {
+          grid-column: span 1;
+        }
+        .place-card.featured .card-emoji-img {
+          height: 200px;
+        }
+        .seasons-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .food-grid {
+          grid-template-columns: 1fr;
+        }
+        .main-nav {
+          /* display: none; */
+          flex-direction: column;
+          position: absolute;
+          top: 58px;
+          left: 0;
+          right: 0;
+          background: white;
+          padding: 1.5rem 2rem;
+          gap: 1.2rem;
+          border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+        }
+        .main-nav.open {
+          display: flex;
+        }
+        .nav-toggle {
+          display: flex;
+        }
+        .places-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <nav>
+      <div class="wraper">
+        <div class="brand">นครปฐม ✦</div>
+        <ul class="main-nav" id="mainNav">
+          <li><a href="#home">หน้าแรก</a></li>
+          <li><a href="#places">สถานที่ท่องเที่ยว</a></li>
+          <li><a href="#contact">ติดต่อ</a></li>
+        </ul>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="content">
+            <div class="hero-life">
+              <div class="content-detail">
+                <p>จังหวัดท่องเที่ยวแนะนำ</p>
+                <h2>ค้นพบเสน่ห์ของเมืองท่องเที่ยวที่คุณไม่ควรพลาด</h2>
+                <p>
+                  สัมผัสธรรมชาติ วัฒนธรรม และอาหารท้องถิ่นที่น่าสนใจ
+                  พร้อมสถานที่ยอดนิยมที่เหมาะสำหรับการพักผ่อนในวันหยุด
+                </p>
+
+                <a href="#" class="btn-primary">อ่านเพิ่มเติม</a>
+              </div>
+            </div>
+
+            <div class="hero-right">
+              <img
+                src="https://paapaii.com/wp-content/uploads/2017/06/nakhonpathom-11.jpg"
+                alt="ภาพสถานที่ท่องเที่ยว"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Places Section - สถานที่ท่องเที่ยวแนะนำ -->
+      <section class="places" id="places">
+        <div class="places-inner">
+          <div class="places-header reveal">
+            <h2 class="title">สถานที่ท่องเที่ยวแนะนำ</h2>
+            <p class="sub-title">
+              ตัวอย่างสถานที่ท่องเที่ยวที่น่าสนใจในจังหวัด
+            </p>
+          </div>
+
+          <div class="places-grid" id="placesGrid">
+            <div class="place-card reveal" data-cat="temple">
+              <div
+                class="card-emoji-img"
+                style="background: linear-gradient(135deg, #1a2c10, #3d6b2a)"
+              >
+                <img
+                  src="https://lh6.googleusercontent.com/proxy/At1uM_gj6TXp6Tjs0V4fOpmcUL92Pem4lA5d2k8I_r_Q6gvHK9WjW3cXYDtYzameu9z1AmlECryK6ZxOieFpsg"
+                  alt="วัดพระงาม"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="card-category">วัดโบราณ</div>
+              <div class="card-body">
+                <h3 class="card-title">วัดพระงาม</h3>
+                <p class="card-desc">
+                  วัดสมัยทวารวดี พระพุทธรูปหินปูนสลักงดงาม บรรยากาศร่มรื่น
+                  สงบเหมาะแก่การนั่งสมาธิ
+                </p>
+                <div class="card-meta">
+                  <a href="#" class="btn-primary">อ่านเพิ่มเติม</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="place-card reveal" data-cat="nature">
+              <div
+                class="card-emoji-img"
+                style="background: linear-gradient(135deg, #0a1a05, #2a4a15)"
+              >
+                <img
+                  src="https://img.salehere.co.th/p/600x0/2022/07/06/uffggkai4d9f.jpg"
+                  alt="ฟาร์มโชคชัย"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="card-category">เกษตรท่องเที่ยว</div>
+              <div class="card-body">
+                <h3 class="card-title">ฟาร์มโชคชัย</h3>
+                <p class="card-desc">
+                  ฟาร์มโคนมขนาดใหญ่ ไอศกรีมสดชวนลิ้มลอง กิจกรรมให้อาหารสัตว์
+                  ทุ่งสีเขียวสุดสายตา
+                </p>
+                <div class="card-meta">
+                  <a href="#" class="btn-primary">อ่านเพิ่มเติม</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="place-card reveal" data-cat="culture">
+              <div
+                class="card-emoji-img"
+                style="background: linear-gradient(135deg, #1a0a2a, #4a1a6b)"
+              >
+                <img
+                  src="https://files.thailandtourismdirectory.go.th/assets/upload/2017/11/23/201711236abc373d0cecd5e1ae01be435f7dfab9093704.jpg"
+                  alt="Rose Garden สามพราน"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="card-category">วัฒนธรรม</div>
+              <div class="card-body">
+                <h3 class="card-title">Rose Garden สามพราน</h3>
+                <p class="card-desc">
+                  ศูนย์วัฒนธรรมไทย การแสดงช้าง วิถีชาวนา และวัฒนธรรมท้องถิ่น
+                  เหมาะแก่ครอบครัวและนักท่องเที่ยวต่างชาติ
+                </p>
+                <div class="card-meta">
+                  <a href="#" class="btn-primary">อ่านเพิ่มเติม</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="container">
+        <div class="footer">
+          <div class="footer-life">
+            <p>
+              ©2026 เที่ยวเมืองน่าไป (ชื่อสกุล นรงศ์ศักดิ์ ภูมิประเสริฐ). All
+              Rights Reserved.
+            </p>
+          </div>
+          <div class="footer-right">
+            <span>Email: 674259009@webmail.npru.ac.th</span>
+            <span>Facebook: เที่ยวเมืองน่าไป (นครปฐม)</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Nav toggle mobile
+      document
+        .getElementById("navToggle")
+        .addEventListener("click", function () {
+          document.getElementById("mainNav").classList.toggle("open");
+        });
+
+      // Scroll reveal
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add("visible"), i * 90);
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.08 },
+      );
+      reveals.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
